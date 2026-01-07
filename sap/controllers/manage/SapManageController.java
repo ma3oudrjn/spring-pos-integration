@@ -1,7 +1,3 @@
-package com.dradev.clinic.controllers.manage;
-
-import com.dradev.clinic.services.inter.SapService;
-import com.dradev.clinic.models.sap.*;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

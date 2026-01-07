@@ -1,4 +1,3 @@
-package com.dradev.clinic.models.sap;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

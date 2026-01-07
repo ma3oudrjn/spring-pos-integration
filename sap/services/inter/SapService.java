@@ -1,6 +1,3 @@
-package com.dradev.clinic.services.inter;
-
-import com.dradev.clinic.models.sap.*;
 
 public interface SapService {
 

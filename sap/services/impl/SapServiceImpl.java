@@ -1,7 +1,3 @@
-package com.dradev.clinic.services.impl;
-
-import com.dradev.clinic.models.sap.*;
-import com.dradev.clinic.services.inter.SapService;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;

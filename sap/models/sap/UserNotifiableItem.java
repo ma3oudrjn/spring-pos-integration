@@ -1,4 +1,3 @@
-package com.dradev.clinic.models.sap;
 
 import lombok.Data;
 
