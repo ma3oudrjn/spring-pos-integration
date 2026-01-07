@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "f7ec07be-a263-4cff-92a3-299250703019",
+		"name": "PCPOS Central",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "StartPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVEOTlEMzg0RDQ4OEVCQkUzRUI4NDdCNjMxMEQ4QTA3NUUxOEIyRjciLCJ0eXAiOiJKV1QiLCJ4NXQiOiJYWm5UaE5TSTY3NC11RWUyTVEyS0IxNFlzdmMifQ.eyJuYmYiOjE2OTg2NjM3MTgsImV4cCI6MTY5ODY2NzMxOCwiaXNzIjoiaHR0cHM6Ly9pZG4uc2VwcGF5LmlyIiwiYXVkIjoiaHR0cHM6Ly9pZG4uc2VwcGF5LmlyL3Jlc291cmNlcyIsImNsaWVudF9pZCI6InJvY2xpZW50Iiwic3ViIjoiY2FkODg5ZmItMThiMi00MDI5LTlhNjYtZjFkNjg4YTA3YjNkIiwiYXV0aF90aW1lIjoxNjk4NjYzNzE4LCJpZHAiOiJsb2NhbCIsInNjb3BlIjpbIm9wZW5pZCIsIlNlcENlbnRyYWxQY1BvcyJdLCJhbXIiOlsicHdkIl19.l33WuMRWmVAVx91iuR8npyocLwO-hHBr4akLysmtf_zo0rcgyz1Xs8ZvKagySqC1PQOkCrHtTselbDcAaTWRO3yXRmS0q_UR3OH3y1r-Es_zu8ZC5gVaK2C3dlJOxFYSrRocoVCjgUFVYdfZXHZMFmQZlmk5wyTtkdnr2wPyiQWCUnLPB7O0zKgltZdSZ_XAjuwfXuBfksU-XdQldBtEzSG-8aH6pYLHwcayeG6TZ7tE0koXejpY2c7upDp2Y37nVfX4k6LvG_qgk0UlHOgTew6rJ5B93Ewv9dgSS7MdT5TOnt7bl_oq1mP1Bhkz4hLQ1jV4X_aVvl8SNMXcpEVU3A"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TerminalID\": \"13947404\",\r\n    \"AccountType\": 0,\r\n    \"TransactionType\": 0,\r\n    \"ResNum\": \"654321\",\r\n    \"Identifier\": \"1b25f6e3-2407-4d0a-82de-0a5221844eec\",\r\n    \"Amount\":\"10000\",\r\n    \"RefrenceData\": \"TestAdditionaldata:123456789123456789123456\",\r\n    \"UserNotifiable\": {\r\n        \"FooterMessage\": null,\r\n        \"PrintItems\": [\r\n            {\r\n                \"Item\": \"\",\r\n                \"Value\": \"\",\r\n                \"Alignment\": 2,\r\n                \"ReceiptType\": 0\r\n            }\r\n        ]\r\n    }\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://cpcpos.seppay.ir/v1/PcPosTransaction/StartPayment",
+					"protocol": "https",
+					"host": [
+						"cpcpos",
+						"seppay",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"PcPosTransaction",
+						"StartPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReciveIdentifier",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVEOTlEMzg0RDQ4OEVCQkUzRUI4NDdCNjMxMEQ4QTA3NUUxOEIyRjciLCJ0eXAiOiJKV1QiLCJ4NXQiOiJYWm5UaE5TSTY3NC11RWUyTVEyS0IxNFlzdmMifQ.eyJuYmYiOjE3MTUxNDg1NzMsImV4cCI6MTcxNTE1MjE3MywiaXNzIjoiaHR0cHM6Ly9pZG4uc2VwcGF5LmlyIiwiYXVkIjoiaHR0cHM6Ly9pZG4uc2VwcGF5LmlyL3Jlc291cmNlcyIsImNsaWVudF9pZCI6InJvY2xpZW50Iiwic3ViIjoiNmJiZTQ3NTAtYTdmZi00MDIzLTkxNzItZjdhZThiZjRlYzc5IiwiYXV0aF90aW1lIjoxNzE1MTQ4NTczLCJpZHAiOiJsb2NhbCIsInNjb3BlIjpbIm9wZW5pZCIsIlNlcENlbnRyYWxQY1BvcyJdLCJhbXIiOlsicHdkIl19.iUi2QS3Okml-RK0ikJASytdj3gXwKHbG0Evs2GWyYSZM8owvWtSN_9gAvOVJazWMokoGjPgflYHYjI-AlsAiDRECuUZmkV3htgXRTVVvq3j6GP9sUh32dW4YWIr7kPEs6plcvzP6uEsOv4UNoLYtZnItca6Unn-fLPNpGHChYJeNFtAZvsZZuOL_2ViTuSYVvkHaMI6JXDIU4kKhHwMZS79-jTBR-fGfq1TeAJ5Q880OgMzy-SsrXQ_dn80drqeVA68Wq5blaGEnMtV9BSB3w_qV_qOd9gTVbuoRta4PaJvW0Op0MtowKA-UFXNju37Tnyy6gZQd6H-u7w71zHydNw"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://cpcpos.seppay.ir/v1/PcPosTransaction/ReciveIdentifier",
+					"protocol": "https",
+					"host": [
+						"cpcpos",
+						"seppay",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"PcPosTransaction",
+						"ReciveIdentifier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inquery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVEOTlEMzg0RDQ4OEVCQkUzRUI4NDdCNjMxMEQ4QTA3NUUxOEIyRjciLCJ0eXAiOiJKV1QiLCJ4NXQiOiJYWm5UaE5TSTY3NC11RWUyTVEyS0IxNFlzdmMifQ.eyJuYmYiOjE3MTc5MzQ2ODEsImV4cCI6MTcxNzkzODI4MSwiaXNzIjoiaHR0cHM6Ly9pZG4uc2VwcGF5LmlyIiwiYXVkIjoiaHR0cHM6Ly9pZG4uc2VwcGF5LmlyL3Jlc291cmNlcyIsImNsaWVudF9pZCI6InJvY2xpZW50Iiwic3ViIjoiNmJiZTQ3NTAtYTdmZi00MDIzLTkxNzItZjdhZThiZjRlYzc5IiwiYXV0aF90aW1lIjoxNzE3OTM0NjgxLCJpZHAiOiJsb2NhbCIsInNjb3BlIjpbIm9wZW5pZCIsIlNlcENlbnRyYWxQY1BvcyJdLCJhbXIiOlsicHdkIl19.hIoQJjRV7iSPI5uyr9BYOWoaOLtacbhn4feheG2cEsDRMI7qXjTOXQtXFFc_EnrWWkkdeY-nW--XoQ9Hjg4hgodm6QL_JTZDauoDULlKUQKsRtQRxMXjQLAjXHSkptEhtEP2qsbrQ00iTAQBUtjd4fK-u75imwMZ4VwL5G_INyG0G5CrAgA1YL6Ek3bsBxrJ8ACxARxTqge-D9662N22fsxbE2IBzQ1ky11fNIX9l6zXM8mbbH0Ixrcl5wbyHIVitn4tW7DdxIUT6y8hPdBopNEg5g2fairPPl97JknFPQO-avx7rZKB4gxwmjHw16oraCfDkuCiOGOtVZ_ot-VUkw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cancelPendingRequest\":true,\n\t\"Identifier\": \"234a6b99-f131-49a3-b743-43fbf5da5b6c\"\n}"
+				},
+				"url": {
+					"raw": "https://cpcpos.seppay.ir/v1/PcPosTransaction/Inquery",
+					"protocol": "https",
+					"host": [
+						"cpcpos",
+						"seppay",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"PcPosTransaction",
+						"Inquery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "roclient",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic cm9jbGllbnQ6c2VjcmV0"
+					},
+					{
+						"key": "Origin",
+						"value": "http://expert.lmo.local",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "grant_type=password&username=testuser&password=@Sep123456&scope=SepCentralPcPos openid"
+				},
+				"url": {
+					"raw": "https://idn.seppay.ir/connect/token",
+					"protocol": "https",
+					"host": [
+						"idn",
+						"seppay",
+						"ir"
+					],
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
